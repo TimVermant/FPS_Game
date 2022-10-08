@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Zombone",
+			"Path": "D:\\Portfolio\\Unreal\\FPS_Game\\Zombone\\Source\\Zombone.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ZomboneEditor",
+			"Path": "D:\\Portfolio\\Unreal\\FPS_Game\\Zombone\\Source\\ZomboneEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

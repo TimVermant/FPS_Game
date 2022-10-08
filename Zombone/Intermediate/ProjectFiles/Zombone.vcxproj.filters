@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Zombone.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{35CBABC1-AADC-4DEA-8355-C3FDCD402211}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Zombone.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ZomboneEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{2DB5ED37-0CB3-46FA-BCC6-2DAE37FD2B76}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Zombone">
+      <UniqueIdentifier>{DFCDA3E7-44F2-4678-9606-EB343B21BBA3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Zombone\Zombone.Build.cs">
+      <Filter>Source\Zombone</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Zombone\Zombone.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\Zombone.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\ZomboneCharacter.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\ZomboneCharacter.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\ZomboneGameMode.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\ZomboneGameMode.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\ZomboneHUD.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\ZomboneHUD.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\ZomboneProjectile.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\ZomboneProjectile.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

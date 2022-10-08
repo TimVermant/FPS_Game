@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Portfolio\\Unreal\\FPS_Game\\Zombone\\Source\\Zombone\\Zombone.Build.cs",
+		"D:\\Portfolio\\Unreal\\FPS_Game\\Zombone\\Source\\Zombone.Target.cs",
+		"D:\\Portfolio\\Unreal\\FPS_Game\\Zombone\\Source\\ZomboneEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

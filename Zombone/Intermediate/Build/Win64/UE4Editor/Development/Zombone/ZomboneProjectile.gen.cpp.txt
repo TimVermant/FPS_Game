@@ -1,0 +1,5 @@
+D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\Definitions.Zombone.h
+D:\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone/ZomboneProjectile.h
+D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Inc\Zombone\ZomboneProjectile.generated.h
