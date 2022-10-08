@@ -9,3 +9,5 @@ D:\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SphereComp
 D:\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
 D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\Zombie.h
+D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Inc\Zombone\Zombie.generated.h

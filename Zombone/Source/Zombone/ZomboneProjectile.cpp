@@ -3,8 +3,10 @@
 #include "ZomboneProjectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "Zombie.h"
 
-AZomboneProjectile::AZomboneProjectile() 
+
+AZomboneProjectile::AZomboneProjectile()
 {
 	// Use a sphere as a simple collision representation
 	CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
@@ -38,6 +40,18 @@ void AZomboneProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 
-		Destroy();
+		/*if (OtherActor->IsA<AZombie>())
+		{
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Hitting zombie"));
+		}*/
+	
+	Destroy();
 	}
+
+	if (Cast<AZombie>(OtherActor) != NULL)
+	{
+		Cast<AZombie>(OtherActor)->GetHit(10.0f);
+	}
+
 }
