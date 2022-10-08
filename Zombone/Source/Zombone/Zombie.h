@@ -14,6 +14,8 @@ class ZOMBONE_API AZombie : public APawn
 		UPROPERTY(VisibleDefaultsOnly, Category = Zombie)
 		float m_ZombieHealth = 100.f;
 
+
+
 public:
 	// Sets default values for this pawn's properties
 	AZombie();
@@ -22,7 +24,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

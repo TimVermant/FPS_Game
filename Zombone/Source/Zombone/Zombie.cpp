@@ -16,6 +16,8 @@ AZombie::AZombie()
 void AZombie::BeginPlay()
 {
 	Super::BeginPlay();
+
+	
 	
 }
 

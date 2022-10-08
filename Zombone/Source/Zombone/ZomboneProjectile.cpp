@@ -40,12 +40,6 @@ void AZomboneProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 
-		/*if (OtherActor->IsA<AZombie>())
-		{
-
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Hitting zombie"));
-		}*/
-	
 	Destroy();
 	}
 

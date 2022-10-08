@@ -13,6 +13,8 @@ class AZomboneGameMode : public AGameModeBase
 
 public:
 	AZomboneGameMode();
+
+
 };
 
 
