@@ -1,27 +1,3 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Portfolio\Unreal\FPS_Game).
-  Parsing headers for ZomboneEditor
-    Running UnrealHeaderTool "D:\Portfolio\Unreal\FPS_Game\Zombone\Zombone.uproject" "D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\ZomboneEditor\Development\ZomboneEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\timve\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for ZomboneEditor in 4,4009643 seconds
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-2284.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-2284.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-6540.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-6540.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-2284.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-6540.lib
-  Building ZomboneEditor...
-  Using Visual Studio 2019 14.23.28107 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.23.28105) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 9 actions with 12 processes...
-    [1/9] Zombone.init.gen.cpp
-    [2/9] ZombieWaveManager.cpp
-    [3/9] Zombie.cpp
-    [4/9] ZomboneGameMode.gen.cpp
-    [5/9] ZombieWaveManager.gen.cpp
-    [6/9] ZomboneGameMode.cpp
-    [7/9] UE4Editor-Zombone.lib
-       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.exp
-    [8/9] UE4Editor-Zombone.dll
-       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.exp
-    [9/9] ZomboneEditor.target
-  Total time in Parallel executor: 2,23 seconds
-  Total execution time: 7,26 seconds
+  Target is up to date
+  Total execution time: 0,68 seconds

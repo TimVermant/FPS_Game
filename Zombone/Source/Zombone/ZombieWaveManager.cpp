@@ -6,37 +6,35 @@
 
 AZombieWaveManager::AZombieWaveManager()
 {
-	//FActorSpawnParameters spawnParams;
 
-	//GetWorld()->SpawnActor<AZombie>(FVector{ 100 }, FRotator{ 0 }, spawnParams);
-	//GetWorld()->SpawnActor(AZombie::StaticClass());
-
-	//SpawnWave(4);
 }
 
 void AZombieWaveManager::BeginPlay()
 {
 	Super::BeginPlay();
 
-	AZombie* zom = GetWorld()->SpawnActor<AZombie>(ActorToSpawn, FVector{ 100 }, FRotator{ 0 });
+	//SpawnWave(4);
 
 }
 
 
 
 
-//void AZombieWaveManager::SpawnWave(int amount)
-//{
-//	for (size_t i{ 0 }; i < amount; i++)
-//	{
-//
-//		SpawnZombie(&AZombie{});
-//	}
-//}
-//
-//void AZombieWaveManager::SpawnZombie(AZombie* pZombie)
-//{
-//	//GetWorld()->SpawnActor<AZombie>(pZombie);
-//	/*AZombie* newZombie = Cast<AZombie>(GetWorld()->SpawnActor(AZombie::StaticClass()));
-//	m_ActiveZombieList.Add(newZombie);*/
-//}
+void AZombieWaveManager::SpawnWave(int amount)
+{
+	FVector startPos{ 0.f,0.f,100.f };
+	for (size_t i{ 0 }; i < amount; i++)
+	{
+
+		SpawnZombie(startPos, FRotator{ 0 });
+		startPos.Z += 100.0f;
+	}
+}
+
+void AZombieWaveManager::SpawnZombie(const FVector& location, const FRotator& rotator)
+{
+	AZombie* zom = GetWorld()->SpawnActor<AZombie>(ActorToSpawn, FVector{ 100 }, FRotator{ 0 });
+	zom->SetActorLocation(location);
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::SanitizeFloat(zom->GetActorLocation().Z));
+	m_ActiveZombieList.Add(zom);
+}

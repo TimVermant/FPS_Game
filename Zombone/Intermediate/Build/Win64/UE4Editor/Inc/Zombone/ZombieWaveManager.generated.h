@@ -8,14 +8,24 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
+struct FRotator;
 #ifdef ZOMBONE_ZombieWaveManager_generated_h
 #error "ZombieWaveManager.generated.h already included, missing '#pragma once' in ZombieWaveManager.h"
 #endif
 #define ZOMBONE_ZombieWaveManager_generated_h
 
 #define Zombone_Source_Zombone_ZombieWaveManager_h_17_SPARSE_DATA
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSpawnZombie);
+
+
+#define Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSpawnZombie);
+
+
 #define Zombone_Source_Zombone_ZombieWaveManager_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAZombieWaveManager(); \

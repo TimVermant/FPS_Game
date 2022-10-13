@@ -17,12 +17,80 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 	ZOMBONE_API UClass* Z_Construct_UClass_AZombieWaveManager();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_Zombone();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
 	ZOMBONE_API UClass* Z_Construct_UClass_AZombie_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AZombieWaveManager::execSpawnZombie)
+	{
+		P_GET_STRUCT_REF(FVector,Z_Param_Out_location);
+		P_GET_STRUCT_REF(FRotator,Z_Param_Out_rotator);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SpawnZombie(Z_Param_Out_location,Z_Param_Out_rotator);
+		P_NATIVE_END;
+	}
 	void AZombieWaveManager::StaticRegisterNativesAZombieWaveManager()
 	{
+		UClass* Class = AZombieWaveManager::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "SpawnZombie", &AZombieWaveManager::execSpawnZombie },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics
+	{
+		struct ZombieWaveManager_eventSpawnZombie_Parms
+		{
+			FVector location;
+			FRotator rotator;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_location_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_location;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rotator_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_rotator;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_location_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_location = { "location", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZombieWaveManager_eventSpawnZombie_Parms, location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_location_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_location_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_rotator_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_rotator = { "rotator", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZombieWaveManager_eventSpawnZombie_Parms, rotator), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_rotator_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_rotator_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_location,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::NewProp_rotator,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ZombieWaveManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AZombieWaveManager, nullptr, "SpawnZombie", nullptr, nullptr, sizeof(ZombieWaveManager_eventSpawnZombie_Parms), Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C20401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AZombieWaveManager_SpawnZombie()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AZombieWaveManager_SpawnZombie_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AZombieWaveManager_NoRegister()
 	{
@@ -31,6 +99,7 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 	struct Z_Construct_UClass_AZombieWaveManager_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -50,6 +119,9 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 	UObject* (*const Z_Construct_UClass_AZombieWaveManager_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AGameModeBase,
 		(UObject* (*)())Z_Construct_UPackage__Script_Zombone,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AZombieWaveManager_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AZombieWaveManager_SpawnZombie, "SpawnZombie" }, // 2823219570
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZombieWaveManager_Statics::Class_MetaDataParams[] = {
@@ -89,11 +161,11 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AZombieWaveManager_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AZombieWaveManager_Statics::PropPointers),
 		0,
 		0x009002ACu,
@@ -108,7 +180,7 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZombieWaveManager, 195800283);
+	IMPLEMENT_CLASS(AZombieWaveManager, 938768675);
 	template<> ZOMBONE_API UClass* StaticClass<AZombieWaveManager>()
 	{
 		return AZombieWaveManager::StaticClass();

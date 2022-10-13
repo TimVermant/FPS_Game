@@ -36,10 +36,10 @@ public:
 	AZombieWaveManager();
 
 
-	//void SpawnWave(int amount);
+	void SpawnWave(int amount);
 
 
-	//UFUNCTION()
-	//	void SpawnZombie(AZombie* pZombie);
+	UFUNCTION()
+		void SpawnZombie(const FVector& location, const FRotator& rotator);
 	
 };
