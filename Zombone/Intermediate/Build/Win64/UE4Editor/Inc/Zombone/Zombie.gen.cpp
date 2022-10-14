@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 // Cross Module References
 	ZOMBONE_API UClass* Z_Construct_UClass_AZombie_NoRegister();
 	ZOMBONE_API UClass* Z_Construct_UClass_AZombie();
-	ENGINE_API UClass* Z_Construct_UClass_APawn();
+	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Zombone();
 // End Cross Module References
 	void AZombie::StaticRegisterNativesAZombie()
@@ -40,7 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_AZombie_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_APawn,
+		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_Zombone,
 	};
 #if WITH_METADATA
@@ -87,7 +87,7 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZombie, 1324639972);
+	IMPLEMENT_CLASS(AZombie, 1781006950);
 	template<> ZOMBONE_API UClass* StaticClass<AZombie>()
 	{
 		return AZombie::StaticClass();

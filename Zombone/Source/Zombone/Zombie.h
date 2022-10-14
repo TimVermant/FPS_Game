@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "GameFramework/Character.h"
 #include "Zombie.generated.h"
 
 UCLASS()
-class ZOMBONE_API AZombie : public APawn
+class ZOMBONE_API AZombie : public ACharacter
 {
 	GENERATED_BODY()
 

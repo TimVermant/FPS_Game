@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "ZomboneCharacter.generated.h"
 
+
 class UInputComponent;
 class USkeletalMeshComponent;
 class USceneComponent;

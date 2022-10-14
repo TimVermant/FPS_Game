@@ -21,7 +21,7 @@ private: \
 	static void StaticRegisterNativesAZombie(); \
 	friend struct Z_Construct_UClass_AZombie_Statics; \
 public: \
-	DECLARE_CLASS(AZombie, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Zombone"), NO_API) \
+	DECLARE_CLASS(AZombie, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Zombone"), NO_API) \
 	DECLARE_SERIALIZER(AZombie)
 
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesAZombie(); \
 	friend struct Z_Construct_UClass_AZombie_Statics; \
 public: \
-	DECLARE_CLASS(AZombie, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Zombone"), NO_API) \
+	DECLARE_CLASS(AZombie, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Zombone"), NO_API) \
 	DECLARE_SERIALIZER(AZombie)
 
 

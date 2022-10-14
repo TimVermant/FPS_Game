@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeZombone_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4484A8E7,
-				0x87886F38,
+				0x62A11AEB,
+				0x60077805,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

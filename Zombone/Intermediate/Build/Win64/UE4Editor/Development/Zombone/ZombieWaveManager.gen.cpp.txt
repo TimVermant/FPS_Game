@@ -7,5 +7,11 @@ D:\Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\Zombie.h
+D:\Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+D:\Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Inc\Zombone\Zombie.generated.h
 D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Inc\Zombone\ZombieWaveManager.generated.h
