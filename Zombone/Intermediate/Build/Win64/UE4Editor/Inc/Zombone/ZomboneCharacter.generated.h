@@ -66,7 +66,12 @@ public: \
 	FORCEINLINE static uint32 __PPO__VR_MuzzleLocation() { return STRUCT_OFFSET(AZomboneCharacter, VR_MuzzleLocation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AZomboneCharacter, FirstPersonCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__R_MotionController() { return STRUCT_OFFSET(AZomboneCharacter, R_MotionController); } \
-	FORCEINLINE static uint32 __PPO__L_MotionController() { return STRUCT_OFFSET(AZomboneCharacter, L_MotionController); }
+	FORCEINLINE static uint32 __PPO__L_MotionController() { return STRUCT_OFFSET(AZomboneCharacter, L_MotionController); } \
+	FORCEINLINE static uint32 __PPO__m_CurrentBullets() { return STRUCT_OFFSET(AZomboneCharacter, m_CurrentBullets); } \
+	FORCEINLINE static uint32 __PPO__m_MaxBullets() { return STRUCT_OFFSET(AZomboneCharacter, m_MaxBullets); } \
+	FORCEINLINE static uint32 __PPO__m_IsReloading() { return STRUCT_OFFSET(AZomboneCharacter, m_IsReloading); } \
+	FORCEINLINE static uint32 __PPO__m_ReloadTimerHandler() { return STRUCT_OFFSET(AZomboneCharacter, m_ReloadTimerHandler); } \
+	FORCEINLINE static uint32 __PPO__m_TimerDelay() { return STRUCT_OFFSET(AZomboneCharacter, m_TimerDelay); }
 
 
 #define Zombone_Source_Zombone_ZomboneCharacter_h_18_PROLOG

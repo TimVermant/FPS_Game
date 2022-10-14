@@ -39,13 +39,13 @@ void AZomboneProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr) && OtherComp->IsSimulatingPhysics())
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
-
-	Destroy();
+		Destroy();
 	}
 
 	if (Cast<AZombie>(OtherActor) != NULL)
 	{
 		Cast<AZombie>(OtherActor)->GetHit(10.0f);
+		Destroy();
 	}
 
 }

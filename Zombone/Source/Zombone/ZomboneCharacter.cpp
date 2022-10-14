@@ -143,6 +143,14 @@ void AZomboneCharacter::OnFire()
 	// try and fire a projectile
 	if (ProjectileClass != nullptr)
 	{
+		if (m_IsReloading)
+			return;
+		if (m_CurrentBullets <= 0) {
+			GetWorldTimerManager().SetTimer(m_ReloadTimerHandler, this, &AZomboneCharacter::Reload, m_TimerDelay, false);
+			//Reload();
+			m_IsReloading = true;
+			return;
+		}
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
@@ -166,6 +174,9 @@ void AZomboneCharacter::OnFire()
 				World->SpawnActor<AZomboneProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
 			}
 		}
+
+		--m_CurrentBullets;
+
 	}
 
 	// try and play the sound if specified
@@ -184,6 +195,14 @@ void AZomboneCharacter::OnFire()
 			AnimInstance->Montage_Play(FireAnimation, 1.f);
 		}
 	}
+}
+
+void AZomboneCharacter::Reload()
+{
+
+	m_CurrentBullets = m_MaxBullets;
+	GetWorldTimerManager().ClearTimer(m_ReloadTimerHandler);
+	m_IsReloading = false;
 }
 
 void AZomboneCharacter::OnResetVR()

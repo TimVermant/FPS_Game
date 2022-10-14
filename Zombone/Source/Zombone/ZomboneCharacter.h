@@ -52,6 +52,21 @@ class AZomboneCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UMotionControllerComponent* L_MotionController;
 
+	// OWN CODE
+	UPROPERTY()
+		int m_CurrentBullets = 30;
+	UPROPERTY()
+		int m_MaxBullets = 30;
+
+	UPROPERTY()
+		bool m_IsReloading = false;
+
+	UPROPERTY()
+		FTimerHandle m_ReloadTimerHandler;
+
+	UPROPERTY()
+		float m_TimerDelay = 2.0f;
+
 public:
 	AZomboneCharacter();
 
@@ -91,6 +106,9 @@ protected:
 	
 	/** Fires a projectile. */
 	void OnFire();
+
+	// Reloads gun
+	void Reload();
 
 	/** Resets HMD orientation and position in VR. */
 	void OnResetVR();

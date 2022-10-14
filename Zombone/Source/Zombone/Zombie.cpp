@@ -37,10 +37,11 @@ void AZombie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void AZombie::GetHit(float damage)
 {
-	FString text = "Hitting zombie for: ";
-	text.Append(FString::SanitizeFloat(damage));
-	text.Append(" damage");
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, text);
+	// Debug
+	//FString text = "Hitting zombie for: ";
+	//text.Append(FString::SanitizeFloat(damage));
+	//text.Append(" damage");
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, text);
 
 	m_ZombieHealth -= damage;
 	if (m_ZombieHealth <= 0.0f)

@@ -12,13 +12,25 @@ class ZOMBONE_API AZombie : public ACharacter
 	GENERATED_BODY()
 
 		UPROPERTY(VisibleDefaultsOnly, Category = Zombie)
-		float m_ZombieHealth = 100.f;
+		float m_ZombieHealth = 50.0f;
 
 
 
 public:
-	// Sets default values for this pawn's properties
+	// Sets default values for this character's properties
 	AZombie();
+
+	UPROPERTY(VisibleAnywhere)
+		class UStaticMeshComponent* MyMesh;
+
+	UPROPERTY(EditAnywhere)
+		class UMaterial* DefaultMaterial;
+
+	UPROPERTY(EditAnywhere)
+		class UMaterial* HitMaterial;
+
+
+
 
 protected:
 	// Called when the game starts or when spawned

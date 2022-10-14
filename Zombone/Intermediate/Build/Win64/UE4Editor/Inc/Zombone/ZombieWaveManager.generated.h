@@ -70,7 +70,8 @@ public: \
 
 #define Zombone_Source_Zombone_ZombieWaveManager_h_17_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__m_ActiveZombieList() { return STRUCT_OFFSET(AZombieWaveManager, m_ActiveZombieList); } \
-	FORCEINLINE static uint32 __PPO__ActorToSpawn() { return STRUCT_OFFSET(AZombieWaveManager, ActorToSpawn); }
+	FORCEINLINE static uint32 __PPO__ActorToSpawn() { return STRUCT_OFFSET(AZombieWaveManager, ActorToSpawn); } \
+	FORCEINLINE static uint32 __PPO__WaveAmounts() { return STRUCT_OFFSET(AZombieWaveManager, WaveAmounts); }
 
 
 #define Zombone_Source_Zombone_ZombieWaveManager_h_14_PROLOG

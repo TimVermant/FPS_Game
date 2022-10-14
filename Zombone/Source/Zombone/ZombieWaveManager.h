@@ -26,17 +26,25 @@ class ZOMBONE_API AZombieWaveManager : public AGameModeBase
 protected:
 	virtual void BeginPlay();
 
+	virtual void Update();
+
 private:
 
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 		TSubclassOf<AActor> ActorToSpawn;
 
+	UPROPERTY()
+		int WaveAmounts;
+
 public:
 
 	AZombieWaveManager();
 
+	UPROPERTY()
+		FTimerHandle WaveTimer;
 
-	void SpawnWave(int amount);
+	void SpawnWave();
+
 
 
 	UFUNCTION()

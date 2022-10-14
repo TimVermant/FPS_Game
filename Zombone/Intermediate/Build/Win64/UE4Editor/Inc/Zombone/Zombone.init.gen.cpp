@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeZombone_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x62A11AEB,
+				0xEF6B4B97,
 				0x60077805,
 				METADATA_PARAMS(nullptr, 0)
 			};
