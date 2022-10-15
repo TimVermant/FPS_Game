@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ZOMBONE_ZomboneCharacter_generated_h
 
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_SPARSE_DATA
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_RPC_WRAPPERS
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_INCLASS_NO_PURE_DECLS \
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_SPARSE_DATA
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAZomboneCharacter(); \
 	friend struct Z_Construct_UClass_AZomboneCharacter_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AZomboneCharacter)
 
 
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_INCLASS \
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_INCLASS \
 private: \
 	static void StaticRegisterNativesAZomboneCharacter(); \
 	friend struct Z_Construct_UClass_AZomboneCharacter_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AZomboneCharacter)
 
 
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_STANDARD_CONSTRUCTORS \
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AZomboneCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AZomboneCharacter) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_ENHANCED_CONSTRUCTORS \
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AZomboneCharacter(AZomboneCharacter&&); \
@@ -58,7 +58,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AZomboneCharacter)
 
 
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AZomboneCharacter, Mesh1P); } \
 	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(AZomboneCharacter, FP_Gun); } \
 	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(AZomboneCharacter, FP_MuzzleLocation); } \
@@ -74,27 +74,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__m_TimerDelay() { return STRUCT_OFFSET(AZomboneCharacter, m_TimerDelay); }
 
 
-#define Zombone_Source_Zombone_ZomboneCharacter_h_18_PROLOG
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_GENERATED_BODY_LEGACY \
+#define Zombone_Source_Zombone_ZomboneCharacter_h_19_PROLOG
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_SPARSE_DATA \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_RPC_WRAPPERS \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_INCLASS \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_STANDARD_CONSTRUCTORS \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_SPARSE_DATA \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_INCLASS \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Zombone_Source_Zombone_ZomboneCharacter_h_21_GENERATED_BODY \
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_SPARSE_DATA \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_INCLASS_NO_PURE_DECLS \
-	Zombone_Source_Zombone_ZomboneCharacter_h_21_ENHANCED_CONSTRUCTORS \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_SPARSE_DATA \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_INCLASS_NO_PURE_DECLS \
+	Zombone_Source_Zombone_ZomboneCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

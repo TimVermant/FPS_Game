@@ -1,3 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Portfolio\Unreal\FPS_Game).
-  Target is up to date
-  Total execution time: 1,89 seconds
+  Building ZomboneEditor...
+  Using Visual Studio 2022 14.32.31329 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.32.31326) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 8 processes...
+    [1/4] ZomboneCharacter.cpp
+    [2/4] UE4Editor-Zombone.lib
+       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.exp
+    [3/4] UE4Editor-Zombone.dll
+       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.exp
+    [4/4] ZomboneEditor.target
+  Total time in Parallel executor: 5,41 seconds
+  Total execution time: 5,89 seconds

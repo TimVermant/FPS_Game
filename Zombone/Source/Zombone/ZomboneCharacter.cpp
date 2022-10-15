@@ -89,6 +89,16 @@ void AZomboneCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
+	// Add widget to the screen
+	if (PlayerHudType)
+	{
+		APlayerController* controller = GetController<APlayerController>();
+		PlayerHudWidget = CreateWidget<UPlayerWidget>(controller, PlayerHudType);
+		PlayerHudWidget->AddToViewport();
+
+		// Update initial Hud values
+		PlayerHudWidget->UpdateAmmunition(m_CurrentBullets, m_MaxBullets);
+	}
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 
@@ -119,6 +129,9 @@ void AZomboneCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerI
 
 	// Bind fire event
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AZomboneCharacter::OnFire);
+
+	// Bind reload event
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &AZomboneCharacter::CallReload);
 
 	// Enable touchscreen input
 	EnableTouchscreenMovement(PlayerInputComponent);
@@ -173,9 +186,11 @@ void AZomboneCharacter::OnFire()
 				// spawn the projectile at the muzzle
 				World->SpawnActor<AZomboneProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
 			}
+
 		}
 
 		--m_CurrentBullets;
+		PlayerHudWidget->UpdateAmmunition(m_CurrentBullets, m_MaxBullets);
 
 	}
 
@@ -197,13 +212,23 @@ void AZomboneCharacter::OnFire()
 	}
 }
 
+void AZomboneCharacter::CallReload()
+{
+	m_IsReloading = true;
+	GetWorldTimerManager().SetTimer(m_ReloadTimerHandler, this, &AZomboneCharacter::Reload, m_TimerDelay, false);
+}
+
 void AZomboneCharacter::Reload()
 {
-
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Reloading"));
 	m_CurrentBullets = m_MaxBullets;
 	GetWorldTimerManager().ClearTimer(m_ReloadTimerHandler);
 	m_IsReloading = false;
+
+	PlayerHudWidget->UpdateAmmunition(m_CurrentBullets, m_MaxBullets);
 }
+
+
 
 void AZomboneCharacter::OnResetVR()
 {
@@ -314,6 +339,6 @@ bool AZomboneCharacter::EnableTouchscreenMovement(class UInputComponent* PlayerI
 		//PlayerInputComponent->BindTouch(EInputEvent::IE_Repeat, this, &AZomboneCharacter::TouchUpdate);
 		return true;
 	}
-	
+
 	return false;
 }
