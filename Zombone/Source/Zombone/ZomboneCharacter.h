@@ -63,16 +63,42 @@ class AZomboneCharacter : public ACharacter
 		bool m_IsReloading = false;
 
 	UPROPERTY()
+		bool m_IsTakingDamage = false;
+
+	UPROPERTY()
 		FTimerHandle m_ReloadTimerHandler;
 
 	UPROPERTY()
-		float m_TimerDelay = 2.0f;
+		FTimerHandle m_DamageTimerHandler;
+
+	UPROPERTY()
+		float m_ReloadTimerDelay = 2.0f;
+
+	UPROPERTY()
+		float m_CurrentHealth = 100.f;
+
+	UPROPERTY()
+		float m_DamageTimerDelay = 1.5f;
+
+	
 
 public:
 	AZomboneCharacter();
 
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp,
+		AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
+
 protected:
 	virtual void BeginPlay();
+
+	void TryHit();
+
+	void TakeDamage(float amount);
+	void ResetDamage();
+
+	float m_TotalHealth = 100.f;
+	float m_ZombieDamage = 20.f;
 
 public:
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */

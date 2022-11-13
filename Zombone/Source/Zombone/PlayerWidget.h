@@ -16,10 +16,13 @@ class ZOMBONE_API UPlayerWidget : public UUserWidget
 public:
 
 	void UpdateAmmunition(int current, int max);
+	void UpdateHealth(float current, float max);
 
-	UPROPERTY(EditAnywhere, meta = ( BindWidget ) )
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
 		class UTextBlock* Ammunition;
 
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+		class UProgressBar* Health;
 
 	void NativeConstruct() override;
 };

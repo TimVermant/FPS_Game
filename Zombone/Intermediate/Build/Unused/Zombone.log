@@ -1,38 +1,38 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Portfolio\Unreal\FPS_Game).
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-0551.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-0551.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-1509.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-1509.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-2790.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-2790.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-3577.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-3577.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-4242.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-4242.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-7847.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-7847.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-8219.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-8219.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-9305.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-9305.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-9620.dll
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-9620.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-0551.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-1509.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-2790.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-3577.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-4242.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-7847.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-8219.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-9305.lib
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-9620.lib
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\UnrealPortfolio\Unreal\FPS_Game).
+  Creating makefile for ZomboneEditor (game project files are newer)
+  Parsing headers for ZomboneEditor
+    Running UnrealHeaderTool "C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Zombone.uproject" "C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\ZomboneEditor\Development\ZomboneEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\timve\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for ZomboneEditor in 3,7181063 seconds
+  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-2982.dll
+  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-2982.pdb
+  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-2982.lib
   Building ZomboneEditor...
   Using Visual Studio 2022 14.32.31329 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.32.31326) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 3 actions with 8 processes...
-    [1/3] UE4Editor-Zombone.lib
-       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.exp
-    [2/3] UE4Editor-Zombone.dll
-       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.exp
-    [3/3] ZomboneEditor.target
-  Total time in Parallel executor: 14,89 seconds
-  Total execution time: 37,30 seconds
+  Building 21 actions with 8 processes...
+    [1/21] Default.rc2
+    [2/21] SharedPCH.Engine.ShadowErrors.cpp
+    Detected compiler newer than Visual Studio 2019, please update min version checking in WindowsPlatformCompilerSetup.h
+    [3/21] Zombone.cpp
+    [4/21] Zombone.init.gen.cpp
+    [5/21] ZomboneHUD.gen.cpp
+    [6/21] Zombie.cpp
+    [7/21] ZombieWaveManager.cpp
+    [8/21] ZomboneProjectile.gen.cpp
+    [9/21] ZombieWaveManager.gen.cpp
+    [10/21] ZomboneGameMode.gen.cpp
+    [11/21] ZomboneHUD.cpp
+    [12/21] ZomboneProjectile.cpp
+    [13/21] PlayerWidget.gen.cpp
+    [14/21] ZomboneGameMode.cpp
+    [15/21] PlayerWidget.cpp
+    [16/21] ZomboneCharacter.gen.cpp
+    [17/21] Zombie.gen.cpp
+    [18/21] ZomboneCharacter.cpp
+    [19/21] UE4Editor-Zombone.lib
+       Creating library C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.lib and object C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.exp
+    [20/21] UE4Editor-Zombone.dll
+       Creating library C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.lib and object C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.exp
+    [21/21] ZomboneEditor.target
+  Total time in Parallel executor: 66,92 seconds
+  Total execution time: 80,18 seconds

@@ -2,11 +2,13 @@
 
 #include "ZomboneCharacter.h"
 #include "ZomboneProjectile.h"
+#include "Zombie.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
+#include "GameFramework/Actor.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "MotionControllerComponent.h"
@@ -84,6 +86,48 @@ AZomboneCharacter::AZomboneCharacter()
 	//bUsingMotionControllers = true;
 }
 
+void AZomboneCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
+
+	if (Other->IsA(AZombie::StaticClass()))
+	{
+		TryHit();
+	}
+
+}
+
+void AZomboneCharacter::TryHit()
+{
+	if (!m_IsTakingDamage)
+	{
+		m_IsTakingDamage = true;
+		TakeDamage(m_ZombieDamage);
+		GetWorldTimerManager().SetTimer(m_DamageTimerHandler, this, &AZomboneCharacter::ResetDamage, m_DamageTimerDelay, false);
+
+	}
+}
+
+void AZomboneCharacter::TakeDamage(float amount)
+{
+	m_CurrentHealth -= amount;
+	if (m_CurrentHealth < 0)
+	{
+		// Game over
+	}
+
+	PlayerHudWidget->UpdateHealth(m_CurrentHealth, m_TotalHealth);
+}
+
+
+void AZomboneCharacter::ResetDamage()
+{
+	m_IsTakingDamage = false;
+}
+
+
+
+
 void AZomboneCharacter::BeginPlay()
 {
 	// Call the base class  
@@ -114,6 +158,7 @@ void AZomboneCharacter::BeginPlay()
 		Mesh1P->SetHiddenInGame(false, true);
 	}
 }
+
 
 //////////////////////////////////////////////////////////////////////////
 // Input
@@ -159,8 +204,7 @@ void AZomboneCharacter::OnFire()
 		if (m_IsReloading)
 			return;
 		if (m_CurrentBullets <= 0) {
-			GetWorldTimerManager().SetTimer(m_ReloadTimerHandler, this, &AZomboneCharacter::Reload, m_TimerDelay, false);
-			//Reload();
+			GetWorldTimerManager().SetTimer(m_ReloadTimerHandler, this, &AZomboneCharacter::Reload, m_ReloadTimerDelay, false);
 			m_IsReloading = true;
 			return;
 		}
@@ -215,7 +259,7 @@ void AZomboneCharacter::OnFire()
 void AZomboneCharacter::CallReload()
 {
 	m_IsReloading = true;
-	GetWorldTimerManager().SetTimer(m_ReloadTimerHandler, this, &AZomboneCharacter::Reload, m_TimerDelay, false);
+	GetWorldTimerManager().SetTimer(m_ReloadTimerHandler, this, &AZomboneCharacter::Reload, m_ReloadTimerDelay, false);
 }
 
 void AZomboneCharacter::Reload()

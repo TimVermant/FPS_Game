@@ -17,20 +17,132 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 	ZOMBONE_API UClass* Z_Construct_UClass_AZomboneCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Zombone();
+	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	HEADMOUNTEDDISPLAY_API UClass* Z_Construct_UClass_UMotionControllerComponent_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ZOMBONE_API UClass* Z_Construct_UClass_AZomboneProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ZOMBONE_API UClass* Z_Construct_UClass_UPlayerWidget_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AZomboneCharacter::execNotifyHit)
+	{
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_MyComp);
+		P_GET_OBJECT(AActor,Z_Param_Other);
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+		P_GET_UBOOL(Z_Param_bSelfMoved);
+		P_GET_STRUCT(FVector,Z_Param_HitLocation);
+		P_GET_STRUCT(FVector,Z_Param_HitNormal);
+		P_GET_STRUCT(FVector,Z_Param_NormalImpulse);
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Hit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->NotifyHit(Z_Param_MyComp,Z_Param_Other,Z_Param_OtherComp,Z_Param_bSelfMoved,Z_Param_HitLocation,Z_Param_HitNormal,Z_Param_NormalImpulse,Z_Param_Out_Hit);
+		P_NATIVE_END;
+	}
 	void AZomboneCharacter::StaticRegisterNativesAZomboneCharacter()
 	{
+		UClass* Class = AZomboneCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "NotifyHit", &AZomboneCharacter::execNotifyHit },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics
+	{
+		struct ZomboneCharacter_eventNotifyHit_Parms
+		{
+			UPrimitiveComponent* MyComp;
+			AActor* Other;
+			UPrimitiveComponent* OtherComp;
+			bool bSelfMoved;
+			FVector HitLocation;
+			FVector HitNormal;
+			FVector NormalImpulse;
+			FHitResult Hit;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MyComp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MyComp;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Other;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
+		static void NewProp_bSelfMoved_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bSelfMoved;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HitLocation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HitNormal;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_NormalImpulse;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Hit_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Hit;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_MyComp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_MyComp = { "MyComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventNotifyHit_Parms, MyComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_MyComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_MyComp_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_Other = { "Other", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventNotifyHit_Parms, Other), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_OtherComp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventNotifyHit_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_OtherComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_OtherComp_MetaData)) };
+	void Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_bSelfMoved_SetBit(void* Obj)
+	{
+		((ZomboneCharacter_eventNotifyHit_Parms*)Obj)->bSelfMoved = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_bSelfMoved = { "bSelfMoved", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ZomboneCharacter_eventNotifyHit_Parms), &Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_bSelfMoved_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_HitLocation = { "HitLocation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventNotifyHit_Parms, HitLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_HitNormal = { "HitNormal", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventNotifyHit_Parms, HitNormal), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_NormalImpulse = { "NormalImpulse", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventNotifyHit_Parms, NormalImpulse), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_Hit_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_Hit = { "Hit", nullptr, (EPropertyFlags)0x0010008008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventNotifyHit_Parms, Hit), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_Hit_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_Hit_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_MyComp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_Other,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_OtherComp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_bSelfMoved,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_HitLocation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_HitNormal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_NormalImpulse,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::NewProp_Hit,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ZomboneCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AZomboneCharacter, nullptr, "NotifyHit", nullptr, nullptr, sizeof(ZomboneCharacter_eventNotifyHit_Parms), Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C20400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AZomboneCharacter_NotifyHit()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AZomboneCharacter_NoRegister()
 	{
@@ -39,6 +151,7 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 	struct Z_Construct_UClass_AZomboneCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -88,13 +201,30 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 		static void NewProp_m_IsReloading_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_IsReloading;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_IsTakingDamage_MetaData[];
+#endif
+		static void NewProp_m_IsTakingDamage_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_m_IsTakingDamage;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_ReloadTimerHandler_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_m_ReloadTimerHandler;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_TimerDelay_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_DamageTimerHandler_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_m_TimerDelay;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_m_DamageTimerHandler;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_ReloadTimerDelay_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_m_ReloadTimerDelay;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_CurrentHealth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_m_CurrentHealth;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_DamageTimerDelay_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_m_DamageTimerDelay;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseTurnRate_MetaData[];
 #endif
@@ -135,6 +265,9 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 	UObject* (*const Z_Construct_UClass_AZomboneCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_Zombone,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AZomboneCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AZomboneCharacter_NotifyHit, "NotifyHit" }, // 1572887356
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::Class_MetaDataParams[] = {
@@ -251,17 +384,45 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsReloading = { "m_IsReloading", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AZomboneCharacter), &Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsReloading_SetBit, METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsReloading_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsReloading_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsTakingDamage_MetaData[] = {
+		{ "ModuleRelativePath", "ZomboneCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsTakingDamage_SetBit(void* Obj)
+	{
+		((AZomboneCharacter*)Obj)->m_IsTakingDamage = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsTakingDamage = { "m_IsTakingDamage", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AZomboneCharacter), &Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsTakingDamage_SetBit, METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsTakingDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsTakingDamage_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerHandler_MetaData[] = {
 		{ "ModuleRelativePath", "ZomboneCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerHandler = { "m_ReloadTimerHandler", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZomboneCharacter, m_ReloadTimerHandler), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerHandler_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerHandler_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_TimerDelay_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerHandler_MetaData[] = {
 		{ "ModuleRelativePath", "ZomboneCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_TimerDelay = { "m_TimerDelay", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZomboneCharacter, m_TimerDelay), METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_TimerDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_TimerDelay_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerHandler = { "m_DamageTimerHandler", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZomboneCharacter, m_DamageTimerHandler), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerHandler_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerHandler_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerDelay_MetaData[] = {
+		{ "ModuleRelativePath", "ZomboneCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerDelay = { "m_ReloadTimerDelay", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZomboneCharacter, m_ReloadTimerDelay), METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerDelay_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_CurrentHealth_MetaData[] = {
+		{ "ModuleRelativePath", "ZomboneCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_CurrentHealth = { "m_CurrentHealth", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZomboneCharacter, m_CurrentHealth), METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_CurrentHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_CurrentHealth_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerDelay_MetaData[] = {
+		{ "ModuleRelativePath", "ZomboneCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerDelay = { "m_DamageTimerDelay", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZomboneCharacter, m_DamageTimerDelay), METADATA_PARAMS(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerDelay_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Camera" },
@@ -350,8 +511,12 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_CurrentBullets,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_MaxBullets,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsReloading,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_IsTakingDamage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerHandler,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_TimerDelay,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerHandler,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_ReloadTimerDelay,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_CurrentHealth,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_m_DamageTimerDelay,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZomboneCharacter_Statics::NewProp_GunOffset,
@@ -369,11 +534,11 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AZomboneCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AZomboneCharacter_Statics::PropPointers),
 		0,
 		0x008000A4u,
@@ -388,7 +553,7 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZomboneCharacter, 3536222105);
+	IMPLEMENT_CLASS(AZomboneCharacter, 163572669);
 	template<> ZOMBONE_API UClass* StaticClass<AZomboneCharacter>()
 	{
 		return AZomboneCharacter::StaticClass();

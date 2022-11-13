@@ -1,5 +1,5 @@
-D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\Definitions.Zombone.h
-D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\PlayerWidget.h
+C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\Definitions.Zombone.h
+C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Source\Zombone\PlayerWidget.h
 D:\Epic\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
 D:\Epic\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
@@ -99,8 +99,12 @@ D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PropertyPath\Prope
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DynamicPropertyPath.generated.h
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
-D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Inc\Zombone\PlayerWidget.generated.h
+C:\UnrealPortfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Inc\Zombone\PlayerWidget.generated.h
 D:\Epic\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/TextBlock.h
 D:\Epic\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/TextWidgetTypes.h
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextWidgetTypes.generated.h
 D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextBlock.generated.h
+D:\Epic\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/ProgressBar.h
+D:\Epic\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Notifications/SProgressBar.h
+D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\SProgressBar.generated.h
+D:\Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ProgressBar.generated.h

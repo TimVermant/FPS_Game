@@ -3,6 +3,7 @@
 
 #include "PlayerWidget.h"
 #include "Components/TextBlock.h"
+#include "Components/ProgressBar.h"
 
 
 void UPlayerWidget::NativeConstruct()
@@ -14,4 +15,9 @@ void UPlayerWidget::NativeConstruct()
 void UPlayerWidget::UpdateAmmunition(int current, int max)
 {
 	Ammunition->SetText(FText::AsNumber(current));
+}
+
+void UPlayerWidget::UpdateHealth(float current, float max)
+{
+	Health->SetPercent(current / max);
 }

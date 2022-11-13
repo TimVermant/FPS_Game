@@ -8,14 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FVector;
+struct FHitResult;
 #ifdef ZOMBONE_ZomboneCharacter_generated_h
 #error "ZomboneCharacter.generated.h already included, missing '#pragma once' in ZomboneCharacter.h"
 #endif
 #define ZOMBONE_ZomboneCharacter_generated_h
 
 #define Zombone_Source_Zombone_ZomboneCharacter_h_22_SPARSE_DATA
-#define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS
-#define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execNotifyHit);
+
+
+#define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execNotifyHit);
+
+
 #define Zombone_Source_Zombone_ZomboneCharacter_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAZomboneCharacter(); \
@@ -70,8 +82,12 @@ public: \
 	FORCEINLINE static uint32 __PPO__m_CurrentBullets() { return STRUCT_OFFSET(AZomboneCharacter, m_CurrentBullets); } \
 	FORCEINLINE static uint32 __PPO__m_MaxBullets() { return STRUCT_OFFSET(AZomboneCharacter, m_MaxBullets); } \
 	FORCEINLINE static uint32 __PPO__m_IsReloading() { return STRUCT_OFFSET(AZomboneCharacter, m_IsReloading); } \
+	FORCEINLINE static uint32 __PPO__m_IsTakingDamage() { return STRUCT_OFFSET(AZomboneCharacter, m_IsTakingDamage); } \
 	FORCEINLINE static uint32 __PPO__m_ReloadTimerHandler() { return STRUCT_OFFSET(AZomboneCharacter, m_ReloadTimerHandler); } \
-	FORCEINLINE static uint32 __PPO__m_TimerDelay() { return STRUCT_OFFSET(AZomboneCharacter, m_TimerDelay); }
+	FORCEINLINE static uint32 __PPO__m_DamageTimerHandler() { return STRUCT_OFFSET(AZomboneCharacter, m_DamageTimerHandler); } \
+	FORCEINLINE static uint32 __PPO__m_ReloadTimerDelay() { return STRUCT_OFFSET(AZomboneCharacter, m_ReloadTimerDelay); } \
+	FORCEINLINE static uint32 __PPO__m_CurrentHealth() { return STRUCT_OFFSET(AZomboneCharacter, m_CurrentHealth); } \
+	FORCEINLINE static uint32 __PPO__m_DamageTimerDelay() { return STRUCT_OFFSET(AZomboneCharacter, m_DamageTimerDelay); }
 
 
 #define Zombone_Source_Zombone_ZomboneCharacter_h_19_PROLOG
