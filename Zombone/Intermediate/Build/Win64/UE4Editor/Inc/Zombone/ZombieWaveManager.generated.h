@@ -15,18 +15,18 @@ struct FRotator;
 #endif
 #define ZOMBONE_ZombieWaveManager_generated_h
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_SPARSE_DATA
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_SPARSE_DATA
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSpawnZombie);
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSpawnZombie);
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_INCLASS_NO_PURE_DECLS \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAZombieWaveManager(); \
 	friend struct Z_Construct_UClass_AZombieWaveManager_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(AZombieWaveManager)
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_INCLASS \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesAZombieWaveManager(); \
 	friend struct Z_Construct_UClass_AZombieWaveManager_Statics; \
@@ -44,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(AZombieWaveManager)
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_STANDARD_CONSTRUCTORS \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AZombieWaveManager(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AZombieWaveManager) \
@@ -57,7 +57,7 @@ private: \
 public:
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_ENHANCED_CONSTRUCTORS \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AZombieWaveManager(AZombieWaveManager&&); \
@@ -68,33 +68,34 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AZombieWaveManager)
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_PRIVATE_PROPERTY_OFFSET \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__m_ActiveZombieList() { return STRUCT_OFFSET(AZombieWaveManager, m_ActiveZombieList); } \
 	FORCEINLINE static uint32 __PPO__ActorToSpawn() { return STRUCT_OFFSET(AZombieWaveManager, ActorToSpawn); } \
-	FORCEINLINE static uint32 __PPO__WaveAmounts() { return STRUCT_OFFSET(AZombieWaveManager, WaveAmounts); }
+	FORCEINLINE static uint32 __PPO__WaveAmounts() { return STRUCT_OFFSET(AZombieWaveManager, WaveAmounts); } \
+	FORCEINLINE static uint32 __PPO__m_CurrentWave() { return STRUCT_OFFSET(AZombieWaveManager, m_CurrentWave); }
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_14_PROLOG
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_GENERATED_BODY_LEGACY \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_15_PROLOG
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_PRIVATE_PROPERTY_OFFSET \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_SPARSE_DATA \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_INCLASS \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_STANDARD_CONSTRUCTORS \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_PRIVATE_PROPERTY_OFFSET \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_SPARSE_DATA \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_RPC_WRAPPERS \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_INCLASS \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Zombone_Source_Zombone_ZombieWaveManager_h_17_GENERATED_BODY \
+#define Zombone_Source_Zombone_ZombieWaveManager_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_PRIVATE_PROPERTY_OFFSET \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_SPARSE_DATA \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_INCLASS_NO_PURE_DECLS \
-	Zombone_Source_Zombone_ZombieWaveManager_h_17_ENHANCED_CONSTRUCTORS \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_PRIVATE_PROPERTY_OFFSET \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_SPARSE_DATA \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_INCLASS_NO_PURE_DECLS \
+	Zombone_Source_Zombone_ZombieWaveManager_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

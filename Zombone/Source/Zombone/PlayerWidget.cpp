@@ -14,7 +14,13 @@ void UPlayerWidget::NativeConstruct()
 
 void UPlayerWidget::UpdateAmmunition(int current, int max)
 {
-	Ammunition->SetText(FText::AsNumber(current));
+	FString currentString = FString::FromInt(current).Append("/").Append(FString::FromInt(max));
+	Ammunition->SetText(FText::FromString(currentString));
+}
+
+void UPlayerWidget::UpdateWaveCounter(int current)
+{
+	WaveCounter->SetText(FText::AsNumber(current));
 }
 
 void UPlayerWidget::UpdateHealth(float current, float max)

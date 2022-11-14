@@ -16,6 +16,7 @@ class ZOMBONE_API UPlayerWidget : public UUserWidget
 public:
 
 	void UpdateAmmunition(int current, int max);
+	void UpdateWaveCounter(int current);
 	void UpdateHealth(float current, float max);
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
@@ -23,6 +24,10 @@ public:
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 		class UProgressBar* Health;
+
+
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+		class UTextBlock* WaveCounter;
 
 	void NativeConstruct() override;
 };

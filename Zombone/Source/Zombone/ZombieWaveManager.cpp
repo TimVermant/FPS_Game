@@ -39,6 +39,9 @@ void AZombieWaveManager::SpawnWave()
 	GetWorldTimerManager().ClearTimer(WaveTimer);
 	GetWorldTimerManager().SetTimer(WaveTimer, this, &AZombieWaveManager::SpawnWave, 1.0f, true, 5.0f);
 	WaveAmounts = FMath::RandRange(1, 3);
+	++m_CurrentWave;
+	// Throws error?
+	//PlayerHudWidget->UpdateWaveCounter(m_CurrentWave);
 }
 
 

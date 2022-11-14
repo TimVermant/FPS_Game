@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "Zombie.h"
+#include "PlayerWidget.h"
 #include "ZombieWaveManager.generated.h"
 
 
@@ -36,12 +37,18 @@ private:
 	UPROPERTY()
 		int WaveAmounts;
 
+	UPROPERTY()
+		int m_CurrentWave = 1;
 public:
 
 	AZombieWaveManager();
 
 	UPROPERTY()
 		FTimerHandle WaveTimer;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = HUD)
+		TSubclassOf<UPlayerWidget> PlayerHudType = nullptr;
+	UPlayerWidget* PlayerHudWidget;
 
 	void SpawnWave();
 

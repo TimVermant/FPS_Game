@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
+	ZOMBONE_API UClass* Z_Construct_UClass_UPlayerWidget_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AZombieWaveManager::execSpawnZombie)
 	{
@@ -118,9 +119,17 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_WaveAmounts;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_CurrentWave_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_CurrentWave;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WaveTimer_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_WaveTimer;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerHudType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_PlayerHudType;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -164,17 +173,32 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveAmounts = { "WaveAmounts", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombieWaveManager, WaveAmounts), METADATA_PARAMS(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveAmounts_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveAmounts_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_m_CurrentWave_MetaData[] = {
+		{ "ModuleRelativePath", "ZombieWaveManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_m_CurrentWave = { "m_CurrentWave", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombieWaveManager, m_CurrentWave), METADATA_PARAMS(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_m_CurrentWave_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_m_CurrentWave_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveTimer_MetaData[] = {
 		{ "ModuleRelativePath", "ZombieWaveManager.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveTimer = { "WaveTimer", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombieWaveManager, WaveTimer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveTimer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveTimer_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_PlayerHudType_MetaData[] = {
+		{ "Category", "HUD" },
+		{ "ModuleRelativePath", "ZombieWaveManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_PlayerHudType = { "PlayerHudType", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AZombieWaveManager, PlayerHudType), Z_Construct_UClass_UPlayerWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_PlayerHudType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_PlayerHudType_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AZombieWaveManager_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_m_ActiveZombieList_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_m_ActiveZombieList,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_ActorToSpawn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveAmounts,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_m_CurrentWave,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_WaveTimer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AZombieWaveManager_Statics::NewProp_PlayerHudType,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AZombieWaveManager_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AZombieWaveManager>::IsAbstract,
@@ -203,7 +227,7 @@ void EmptyLinkFunctionForGeneratedCodeZombieWaveManager() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZombieWaveManager, 2058834202);
+	IMPLEMENT_CLASS(AZombieWaveManager, 153329649);
 	template<> ZOMBONE_API UClass* StaticClass<AZombieWaveManager>()
 	{
 		return AZombieWaveManager::StaticClass();
