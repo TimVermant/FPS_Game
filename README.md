@@ -1,5 +1,9 @@
 # Zombone
 The world has officially ended, after the outbreak of an unknown virus that caused dead people to come back alive almost the entirety of humanity has been wiped out. You are one of the few people ‘lucky’ enough to make it this far, by utilising your survival skills and proficiency with various weapons. It is up to you to fight and kill all the dead people so they can all finally rest. 
+
+![image](https://user-images.githubusercontent.com/40210931/203128685-64fdc394-18af-4c04-922a-3155d766810d.png)
+
+
 ## Mechanics
 ### Gameplay loop
 This will be very similar to COD zombie mode, where there will be waves of zombies coming to kill you that exponentially get stronger and more frequent. There are weapons scattered throughout the map and zombies sometimes drop ammo or health kits. The longer you survive the higher your score will be. 
