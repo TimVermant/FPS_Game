@@ -1,7 +1,7 @@
 # Zombone
 The world has officially ended, after the outbreak of an unknown virus that caused dead people to come back alive almost the entirety of humanity has been wiped out. You are one of the few people ‘lucky’ enough to make it this far, by utilising your survival skills and proficiency with various weapons. It is up to you to fight and kill all the dead people so they can all finally rest. 
 
-![image](https://user-images.githubusercontent.com/40210931/203128790-33b68c81-d760-4083-9320-f6380e56034f.png)
+![image](https://user-images.githubusercontent.com/40210931/203134439-66a8e82a-02ff-4a86-8bf0-9f0d35a1d4a7.png)
 
 
 At the time of writing this not exactly every mechanic is present that I want to be present since this is a work in progress still, I however don't doubt my ability to easily be able to expand and add all the listed mechanic given some time.
