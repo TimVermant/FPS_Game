@@ -15,7 +15,7 @@ void AZombieWaveManager::BeginPlay()
 	Super::BeginPlay();
 
 	WaveAmounts = 1;
-	GetWorldTimerManager().SetTimer(WaveTimer, this, &AZombieWaveManager::SpawnWave, 1.0f, true, 1.0f);
+	// GetWorldTimerManager().SetTimer(WaveTimer, this, &AZombieWaveManager::SpawnWave, 1.0f, true, 1.0f);
 }
 
 void AZombieWaveManager::Update()
