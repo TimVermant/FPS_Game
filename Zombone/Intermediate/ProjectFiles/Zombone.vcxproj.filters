@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Zombone.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{1040E77B-E8F6-410F-85F0-19AB990DB020}</UniqueIdentifier>
+      <UniqueIdentifier>{537DB74B-F424-44FD-A50E-D77BF3C7D3E4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Zombone.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B46834C5-1C29-44EB-B8AB-A95CAC308733}</UniqueIdentifier>
+      <UniqueIdentifier>{E720B66C-1ACB-42BE-B2B8-8F83A853A62D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Zombone">
-      <UniqueIdentifier>{BBD2F781-BD49-4132-B0B5-79D5A37C7A95}</UniqueIdentifier>
+      <UniqueIdentifier>{BAD3D2D0-B308-48D8-80FE-97C40541B46B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Zombone\PlayerWidget.cpp">
       <Filter>Source\Zombone</Filter>
