@@ -90,10 +90,10 @@ void AZomboneCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UP
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 
-	if (Other->IsA(AZombie::StaticClass()))
+	/*if (Other->IsA(AZombie::StaticClass()))
 	{
 		TryHit();
-	}
+	}*/
 
 }
 
