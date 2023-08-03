@@ -133,16 +133,21 @@ void AZomboneCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
+	APlayerController* controller = GetController<APlayerController>();
 	// Add widget to the screen
 	if (PlayerHudType)
 	{
-		APlayerController* controller = GetController<APlayerController>();
 		PlayerHudWidget = CreateWidget<UPlayerWidget>(controller, PlayerHudType);
 		PlayerHudWidget->AddToViewport();
 
 		// Update initial Hud values
 		PlayerHudWidget->UpdateAmmunition(m_CurrentBullets, m_MaxBullets);
 	}
+
+	// Set input mode
+	controller->SetInputMode(FInputModeGameAndUI());
+	controller->SetShowMouseCursor(false);
+
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 

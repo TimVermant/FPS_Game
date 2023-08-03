@@ -1,18 +1,17 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Portfolio\Unreal\FPS_Game).
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Binaries\Win64\UE4Editor-Zombone-0001.pdb
-  Deleted hot-reload file: D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone-0001.lib
   Building ZomboneEditor...
   Using Visual Studio 2022 14.34.31935 toolchain (D:\VisualStudio\VC\Tools\MSVC\14.34.31933) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 8 processes...
-    [1/4] ZomboneCharacter.cpp
+  Building 5 actions with 8 processes...
+    [1/5] ZomboneHUD.cpp
+    [2/5] ZomboneCharacter.cpp
 D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\ZomboneCharacter.h(97): warning C4263: 'void AZomboneCharacter::TakeDamage(float)': member function does not override any base class virtual member function
 D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\ZomboneCharacter.h(202): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
     D:\Unreal\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
     D:\Unreal\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h(20): note: see declaration of 'APawn'
-    [2/4] UE4Editor-Zombone.lib
+    [3/5] UE4Editor-Zombone.lib
        Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.exp
-    [3/4] UE4Editor-Zombone.dll
+    [4/5] UE4Editor-Zombone.dll
        Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.exp
-    [4/4] ZomboneEditor.target
-  Total time in Parallel executor: 24,96 seconds
-  Total execution time: 25,65 seconds
+    [5/5] ZomboneEditor.target
+  Total time in Parallel executor: 400,18 seconds
+  Total execution time: 422,80 seconds
