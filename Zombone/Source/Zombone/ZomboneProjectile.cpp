@@ -44,7 +44,7 @@ void AZomboneProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 
 	if (Cast<AZombie>(OtherActor) != NULL)
 	{
-		Cast<AZombie>(OtherActor)->GetHit(10.0f);
+		Cast<AZombie>(OtherActor)->ZombieHit(10.0f);
 		Destroy();
 	}
 

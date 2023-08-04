@@ -80,21 +80,23 @@ class AZomboneCharacter : public ACharacter
 	UPROPERTY()
 		float m_DamageTimerDelay = 1.5f;
 
-	
+
 
 public:
 	AZomboneCharacter();
 
 	UFUNCTION()
-	virtual void NotifyHit(class UPrimitiveComponent* MyComp,
-		AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
+		virtual void NotifyHit(class UPrimitiveComponent* MyComp,
+			AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
+
+	UFUNCTION(BlueprintCallable)
+		void TakeDamage(float amount);
 
 protected:
 	virtual void BeginPlay();
 
 	void TryHit();
 
-	void TakeDamage(float amount);
 	void ResetDamage();
 
 	float m_TotalHealth = 100.f;
@@ -132,7 +134,7 @@ public:
 	// UI STUFF
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = HUD)
 		TSubclassOf<UPlayerWidget> PlayerHudType = nullptr;
-		UPlayerWidget* PlayerHudWidget;
+	UPlayerWidget* PlayerHudWidget;
 
 
 protected:
@@ -142,7 +144,7 @@ protected:
 
 	// Reloads gun
 	void CallReload();
-	
+
 	void Reload();
 
 

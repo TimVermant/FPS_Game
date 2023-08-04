@@ -20,11 +20,13 @@ struct FHitResult;
 #define Zombone_Source_Zombone_ZomboneCharacter_h_22_SPARSE_DATA
 #define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execTakeDamage); \
 	DECLARE_FUNCTION(execNotifyHit);
 
 
 #define Zombone_Source_Zombone_ZomboneCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execTakeDamage); \
 	DECLARE_FUNCTION(execNotifyHit);
 
 

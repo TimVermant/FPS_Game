@@ -35,7 +35,7 @@ void AZombie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-void AZombie::GetHit(float damage)
+void AZombie::ZombieHit(float damage)
 {
 	// Debug
 	//FString text = "Hitting zombie for: ";
@@ -51,5 +51,10 @@ void AZombie::GetHit(float damage)
 
 
 	}
+}
+
+float AZombie::GetDamage()
+{
+	return m_ZombieDamage;
 }
 

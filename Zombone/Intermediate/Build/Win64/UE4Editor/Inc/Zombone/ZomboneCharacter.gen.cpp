@@ -32,6 +32,14 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ZOMBONE_API UClass* Z_Construct_UClass_UPlayerWidget_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AZomboneCharacter::execTakeDamage)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_amount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TakeDamage(Z_Param_amount);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AZomboneCharacter::execNotifyHit)
 	{
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_MyComp);
@@ -52,6 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 		UClass* Class = AZomboneCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "NotifyHit", &AZomboneCharacter::execNotifyHit },
+			{ "TakeDamage", &AZomboneCharacter::execTakeDamage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -141,6 +150,38 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AZomboneCharacter_NotifyHit_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics
+	{
+		struct ZomboneCharacter_eventTakeDamage_Parms
+		{
+			float amount;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_amount;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::NewProp_amount = { "amount", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ZomboneCharacter_eventTakeDamage_Parms, amount), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::NewProp_amount,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ZomboneCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AZomboneCharacter, nullptr, "TakeDamage", nullptr, nullptr, sizeof(ZomboneCharacter_eventTakeDamage_Parms), Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AZomboneCharacter_TakeDamage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AZomboneCharacter_TakeDamage_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -268,6 +309,7 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AZomboneCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AZomboneCharacter_NotifyHit, "NotifyHit" }, // 1572887356
+		{ &Z_Construct_UFunction_AZomboneCharacter_TakeDamage, "TakeDamage" }, // 2125375531
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AZomboneCharacter_Statics::Class_MetaDataParams[] = {
@@ -553,7 +595,7 @@ void EmptyLinkFunctionForGeneratedCodeZomboneCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZomboneCharacter, 163572669);
+	IMPLEMENT_CLASS(AZomboneCharacter, 203333401);
 	template<> ZOMBONE_API UClass* StaticClass<AZomboneCharacter>()
 	{
 		return AZomboneCharacter::StaticClass();

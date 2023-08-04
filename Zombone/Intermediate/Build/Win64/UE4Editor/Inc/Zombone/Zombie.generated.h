@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ZOMBONE_Zombie_generated_h
 
 #define Zombone_Source_Zombone_Zombie_h_12_SPARSE_DATA
-#define Zombone_Source_Zombone_Zombie_h_12_RPC_WRAPPERS
-#define Zombone_Source_Zombone_Zombie_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Zombone_Source_Zombone_Zombie_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetDamage);
+
+
+#define Zombone_Source_Zombone_Zombie_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetDamage);
+
+
 #define Zombone_Source_Zombone_Zombie_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAZombie(); \
@@ -59,7 +67,8 @@ public: \
 
 
 #define Zombone_Source_Zombone_Zombie_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__m_ZombieHealth() { return STRUCT_OFFSET(AZombie, m_ZombieHealth); }
+	FORCEINLINE static uint32 __PPO__m_ZombieHealth() { return STRUCT_OFFSET(AZombie, m_ZombieHealth); } \
+	FORCEINLINE static uint32 __PPO__m_ZombieDamage() { return STRUCT_OFFSET(AZombie, m_ZombieDamage); }
 
 
 #define Zombone_Source_Zombone_Zombie_h_9_PROLOG

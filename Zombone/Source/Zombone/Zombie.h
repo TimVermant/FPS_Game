@@ -14,7 +14,8 @@ class ZOMBONE_API AZombie : public ACharacter
 		UPROPERTY(VisibleDefaultsOnly, Category = Zombie)
 		float m_ZombieHealth = 50.0f;
 
-
+	UPROPERTY(EditAnywhere)
+		float m_ZombieDamage = 10.0f;
 
 public:
 	// Sets default values for this character's properties
@@ -31,7 +32,6 @@ public:
 
 
 
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -43,6 +43,11 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void GetHit(float damage);
+	void ZombieHit(float damage);
+
+
+	UFUNCTION(BlueprintCallable)
+		float GetDamage();
+
 
 };

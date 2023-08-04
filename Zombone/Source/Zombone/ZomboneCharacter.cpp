@@ -90,10 +90,10 @@ void AZomboneCharacter::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UP
 {
 	Super::NotifyHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit);
 
-	/*if (Other->IsA(AZombie::StaticClass()))
-	{
-		TryHit();
-	}*/
+	//if (Other->IsA(AZombie::StaticClass()))
+	//{
+	//	TryHit();
+	//}
 
 }
 
@@ -117,6 +117,7 @@ void AZomboneCharacter::TakeDamage(float amount)
 	}
 
 	PlayerHudWidget->UpdateHealth(m_CurrentHealth, m_TotalHealth);
+	
 }
 
 
@@ -142,10 +143,11 @@ void AZomboneCharacter::BeginPlay()
 
 		// Update initial Hud values
 		PlayerHudWidget->UpdateAmmunition(m_CurrentBullets, m_MaxBullets);
+		PlayerHudWidget->UpdateHealth(m_CurrentHealth, m_TotalHealth);
 	}
 
 	// Set input mode
-	controller->SetInputMode(FInputModeGameAndUI());
+	controller->SetInputMode(FInputModeGameOnly());
 	controller->SetShowMouseCursor(false);
 
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor

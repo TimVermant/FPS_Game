@@ -1,17 +1,26 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Portfolio\Unreal\FPS_Game).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\Portfolio\Unreal\FPS_Game).
+  Parsing headers for ZomboneEditor
+    Running UnrealHeaderTool "E:\Portfolio\Unreal\FPS_Game\Zombone\Zombone.uproject" "E:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\ZomboneEditor\Development\ZomboneEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\timve\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for ZomboneEditor in 4,3048898 seconds
   Building ZomboneEditor...
-  Using Visual Studio 2022 14.34.31935 toolchain (D:\VisualStudio\VC\Tools\MSVC\14.34.31933) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 5 actions with 8 processes...
-    [1/5] ZomboneHUD.cpp
-    [2/5] ZomboneCharacter.cpp
-D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\ZomboneCharacter.h(97): warning C4263: 'void AZomboneCharacter::TakeDamage(float)': member function does not override any base class virtual member function
-D:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\ZomboneCharacter.h(202): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
-    D:\Unreal\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
-    D:\Unreal\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h(20): note: see declaration of 'APawn'
-    [3/5] UE4Editor-Zombone.lib
-       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.exp
-    [4/5] UE4Editor-Zombone.dll
-       Creating library D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.lib and object D:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.exp
-    [5/5] ZomboneEditor.target
-  Total time in Parallel executor: 400,18 seconds
-  Total execution time: 422,80 seconds
+  Using Visual Studio 2022 14.36.32537 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 10 actions with 12 processes...
+    [1/10] Zombone.init.gen.cpp
+    [2/10] ZomboneProjectile.cpp
+    [3/10] Zombie.gen.cpp
+    [4/10] Zombie.cpp
+    [5/10] ZombieWaveManager.cpp
+    [6/10] ZombieWaveManager.gen.cpp
+    [7/10] ZomboneCharacter.cpp
+E:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\ZomboneCharacter.h(93): warning C4263: 'void AZomboneCharacter::TakeDamage(float)': member function does not override any base class virtual member function
+E:\Portfolio\Unreal\FPS_Game\Zombone\Source\Zombone\ZomboneCharacter.h(204): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+    D:\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+    D:\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h(20): note: see declaration of 'APawn'
+    [8/10] UE4Editor-Zombone.lib
+       Creating library E:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.lib and object E:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.exp
+    [9/10] UE4Editor-Zombone.dll
+       Creating library E:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.lib and object E:\Portfolio\Unreal\FPS_Game\Zombone\Intermediate\Build\Win64\UE4Editor\Development\Zombone\UE4Editor-Zombone.suppressed.exp
+    [10/10] ZomboneEditor.target
+  Total time in Parallel executor: 6,91 seconds
+  Total execution time: 12,01 seconds

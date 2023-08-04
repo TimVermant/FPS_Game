@@ -25,5 +25,7 @@ void UPlayerWidget::UpdateWaveCounter(int current)
 
 void UPlayerWidget::UpdateHealth(float current, float max)
 {
-	Health->SetPercent(current / max);
+	float percentHealth = current / max;
+	Health->SetPercent(percentHealth);
+	HealthText->SetText(FText::AsNumber(current));
 }

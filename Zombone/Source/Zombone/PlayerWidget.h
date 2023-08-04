@@ -22,8 +22,12 @@ public:
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 		class UTextBlock* Ammunition;
 
+
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
 		class UProgressBar* Health;
+	UPROPERTY(EditAnywhere, meta = (BindWidget))
+		class UTextBlock* HealthText;
+
 
 
 	UPROPERTY(EditAnywhere, meta = (BindWidget))
