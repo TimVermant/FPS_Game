@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Zombone.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{08CE1DF6-D13C-4581-AA2B-992207F79BE2}</UniqueIdentifier>
+      <UniqueIdentifier>{B82B0449-9F53-4CDF-8952-A28D68B32192}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Zombone.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{28564BCC-AD89-4E00-8A42-409E25CF728A}</UniqueIdentifier>
+      <UniqueIdentifier>{928B31B5-0378-4CF0-8366-6213856800EE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,20 +30,8 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Zombone">
-      <UniqueIdentifier>{F792C618-EC11-4754-8AF7-35AD9AC117D2}</UniqueIdentifier>
+      <UniqueIdentifier>{F10C2B76-E245-4827-B539-D337F273CAAF}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Zombone\PlayerWidget.cpp">
-      <Filter>Source\Zombone</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Zombone\PlayerWidget.h">
-      <Filter>Source\Zombone</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Zombone\Zombie.cpp">
-      <Filter>Source\Zombone</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Zombone\Zombie.h">
-      <Filter>Source\Zombone</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\Zombone\ZombieWaveManager.cpp">
       <Filter>Source\Zombone</Filter>
     </ClCompile>
@@ -59,12 +47,6 @@
     <ClInclude Include="..\..\Source\Zombone\Zombone.h">
       <Filter>Source\Zombone</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Zombone\ZomboneCharacter.cpp">
-      <Filter>Source\Zombone</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Zombone\ZomboneCharacter.h">
-      <Filter>Source\Zombone</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\Zombone\ZomboneGameMode.cpp">
       <Filter>Source\Zombone</Filter>
     </ClCompile>
@@ -77,11 +59,35 @@
     <ClInclude Include="..\..\Source\Zombone\ZomboneHUD.h">
       <Filter>Source\Zombone</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Zombone\ZomboneProjectile.cpp">
-      <Filter>Source\Zombone</Filter>
-    </ClCompile>
     <ClInclude Include="..\..\Source\Zombone\ZomboneProjectile.h">
       <Filter>Source\Zombone</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\PlayerWidget.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\PlayerWidget.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\ZomboneCharacter.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\ZomboneCharacter.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\Zombie.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Zombone\ZomboneProjectile.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zombone\Zombie.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Zombone\DeathScreen.h">
+      <Filter>Source\Zombone</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zombone\DeathScreen.cpp">
+      <Filter>Source\Zombone</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
